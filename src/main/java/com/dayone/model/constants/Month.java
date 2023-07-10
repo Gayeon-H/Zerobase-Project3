@@ -15,8 +15,8 @@ public enum Month {
     NOV("Nov", 11),
     DEC("Dec", 12);
 
-    private String s;
-    private int number;
+    private final String s;
+    private final int number;
 
     Month(String s, int number) {
         this.s = s;
@@ -24,7 +24,7 @@ public enum Month {
     }
 
     public static int strToNumber(String s) {
-        for (var m : Month.values()) {
+        for (Month m : Month.values()) {
             if (m.s.equals(s)) {
                 return m.number;
             }
